@@ -1,7 +1,9 @@
 <x-logout-layout>
 
   <!-- 適切なURLを入力してください -->
-  {!! Form::open(['url' => '〇〇']) !!}
+  {!! Form::open(['url' => '/login']) !!}
+  <!-- urlが '' となっているところにフォームの値を送る -->
+  <!-- post送信をした際AuthenticatedSessionControllerのstoreメソッドが呼ばれる -->
 
   <p>AtlasSNSへようこそ</p>
 

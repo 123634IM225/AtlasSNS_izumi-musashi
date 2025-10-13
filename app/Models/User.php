@@ -21,6 +21,8 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'bio',
+        'icon_image',
     ];
 
     /**
@@ -32,4 +34,18 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+
+
+    public function posts(){
+        return $this->hasMany('App\Models\Post');
+    }
+
+    public function followings(){
+        return $this->belongsToMany('App\Models\User', 'follows', 'following_id', 'followed_id');
+    }
+
+    public function followers(){
+        return $this->belongsToMany('App\Models\User', 'follows', 'followed_id', 'following_id');
+    }
 }
