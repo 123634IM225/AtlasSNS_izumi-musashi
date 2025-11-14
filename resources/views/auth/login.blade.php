@@ -1,21 +1,23 @@
-<x-logout-layout>
+<x-logout-layout class="space-large">
+  <div class="form-wrapper">
+    {!! Form::open(['route' => 'login.store']) !!}
+      <div class="common-box">
+        <p class="box-title">AtlasSNSへようこそ</p>
 
-  <!-- 適切なURLを入力してください -->
-  {!! Form::open(['url' => '/login']) !!}
-  <!-- urlが '' となっているところにフォームの値を送る -->
-  <!-- post送信をした際AuthenticatedSessionControllerのstoreメソッドが呼ばれる -->
+        {{ Form::label('email', 'メールアドレス') }}
+        {{ Form::text('email', null, ['class' => 'input']) }}
 
-  <p>AtlasSNSへようこそ</p>
+        {{ Form::label('password', 'パスワード') }}
+        {{ Form::password('password', ['class' => 'input']) }}
 
-  {{ Form::label('email') }}
-  {{ Form::text('email',null,['class' => 'input']) }}
-  {{ Form::label('password') }}
-  {{ Form::password('password',['class' => 'input']) }}
+        <div class="button-wrapper">
+          {{ Form::submit('ログイン', ['class' => 'login-btn']) }}
+        </div>
 
-  {{ Form::submit('ログイン') }}
-
-  <p><a href="register">新規ユーザーの方はこちら</a></p>
-
-  {!! Form::close() !!}
-
+        <p class="register-link">
+          <a href="{{ route('register.create') }}">新規ユーザーの方はこちら</a>
+        </p>
+      </div>
+    {!! Form::close() !!}
+  </div>
 </x-logout-layout>

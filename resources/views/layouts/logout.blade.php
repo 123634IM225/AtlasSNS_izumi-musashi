@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/logout.css') }} ">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <!--スマホ,タブレット対応-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!--サイトのアイコン指定-->
@@ -22,10 +23,10 @@
         <!--iphoneのアプリアイコン指定-->
         <link rel="apple-touch-icon-precomposed" href="画像のURL" />
     </head>
-    <body>
+    <body {{ $attributes }}>
         <header>
-            <h1><img src="images/atlas.png"></h1>
-            <p>Social Network Service</p>
+            <h1><img src="images/atlas.png" class="atlas-img"></h1>
+            <p class="sub-title">Social Network Service</p>
         </header>
         <div id="container">
             {{ $slot }}

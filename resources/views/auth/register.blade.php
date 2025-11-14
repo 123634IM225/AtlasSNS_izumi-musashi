@@ -1,24 +1,29 @@
-<x-logout-layout>
-    <!-- 適切なURLを入力してください -->
+<x-logout-layout class="space-small">
 {!! Form::open(['url' => 'register']) !!}
+    <div class="common-box">
 
-<h2>新規ユーザー登録</h2>
+        <p class="register-box-title">新規ユーザー登録</p>
 
-{{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
+        {{ Form::label('ユーザー名') }}
+        {{ Form::text('username',null,['class' => 'input']) }}
 
-{{ Form::label('メールアドレス') }}
-{{ Form::email('email',null,['class' => 'input']) }}
+        {{ Form::label('メールアドレス') }}
+        {{ Form::email('email',null,['class' => 'input']) }}
 
-{{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+        {{ Form::label('password','パスワード') }}
+        {{ Form::password('password',['class' => 'input']) }}
 
-{{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+        {{ Form::label('password_confirmation','パスワード確認') }}
+        {{ Form::password('password_confirmation',['class' => 'input']) }}
 
-{{ Form::submit('登録') }}
+        <div class="button-wrapper">
+            {{ Form::submit('新規登録',['class' => 'register-btn']) }}
+        </div>
 
-<p><a href="login">ログイン画面へ戻る</a></p>
+        <p class="login-link">
+            <a href="login">ログイン画面へ戻る</a>
+        </p>
+    </div>
 
 {!! Form::close() !!}
 

@@ -35,26 +35,32 @@
     </div>
     <div id="side-bar">
       <div id="confirm">
-        <p>〇〇さんの</p>
-        <div>
+        <p>{{ Auth::user()->username }}さんの</p>
+        <div id="follow_info">
           <p>フォロー数</p>
-          <p>〇〇名</p>
+          <p id="follow_total">〇〇名</p>
         </div>
-        <p class="btn"><a href="">フォローリスト</a></p>
-        <div>
+        <div id="follow_link">
+          <a class="btn btn-primary follow_link_btn" href="{{ url('/') }}" role="button">フォローリスト</a>
+        </div>
+        <div id="follower_info">
           <p>フォロワー数</p>
-          <p>〇〇名</p>
+          <p id="follower_total">〇〇名</p>
         </div>
-        <p class="btn"><a href="">フォロワーリスト</a></p>
+        <div id="follower_link">
+          <a class="btn btn-primary follower_link_btn" href="{{ url('/') }}" role="button">フォロワーリスト</a>
+        </div>
       </div>
-      <p class="btn"><a href="{{ url('/search') }}">ユーザー検索</a></p>
+      <div id="search_link">
+        <a class="btn btn-primary search_link_btn" href="{{ url('/search') }}" role="button">ユーザー検索</a>
+      </div>
     </div>
   </div>
   <footer>
   </footer>
   <script src="{{ asset('js/app.js') }}"></script>
-  <script src="JavaScriptファイルのURL"></script>
-  <script src="JavaScriptファイルのURL"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>

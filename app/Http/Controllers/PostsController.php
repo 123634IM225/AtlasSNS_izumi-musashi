@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class PostsController extends Controller
 {
     //
-    public function index(){
-        return view('posts.index');
-    }
+    // public function index(){
+    //     return view('posts.index');
+    // }
 
 
     public function postCreate(Request $request)
@@ -40,7 +40,24 @@ class PostsController extends Controller
   //今回の場合、user_idカラムから、$following_id配列に含まれるIDを持つレコードを抽出しています。
     $posts = Post::with('user')->whereIn('user_id',$following_id)->orderBy('created_at', 'desc')->get();
     return view('posts.index', compact('posts'));
-}
+    }
+
+    public function update(Request $request)
+    {
+    $post = Post::findOrFail($request->post_id);
+    if ($post->user_id !== Auth::id()) {
+        abort(403, '不正な操作です。');
+    }
+
+    $request->validate([
+        'post' => 'required|string|max:255',
+    ]);
+
+    $post->post = $request->post;
+    $post->save();
+
+    return redirect()->back()->with('success', '投稿を更新しました。');
+    }
 
     public function delete($post)
     {

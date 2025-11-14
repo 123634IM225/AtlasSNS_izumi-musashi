@@ -1,13 +1,19 @@
-        <div id="head">
-            <h1><a href="{{ url('/top') }}"><img src="images/atlas.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん</p>
+        <div id="nav-head">
+            <a href="{{ route('top') }}"><img src="images/atlas.png"></a>
+            <div id="nav-body">
+                <div id="auth-name">
+                    <p>{{ Auth::user()->username }} さん</p>
                 </div>
-                <ul>
-                    <li><a href="{{ url('/top') }}">ホーム</a></li>
-                    <li><a href="{{ route('profile') }}">プロフィール</a></li>
-                    <li><a href="{{ route('logout') }}">ログアウト</a></li>
-                </ul>
+                <div id="menu-wrapper">
+                    <span id="menu-trigger" class="menu-trigger"></span>
+                    <nav id="g-navi">
+                        <ul>
+                            <li><a href="{{ route('top') }}">HOME</a></li>
+                            <li><a href="{{ route('profile') }}">プロフィール編集</a></li>
+                            <li><a href="{{ route('logout') }}">ログアウト</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="{{ asset('storage/' . Auth::user()->icon_image) }}" >
             </div>
         </div>
