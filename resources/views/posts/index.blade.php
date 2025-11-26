@@ -20,10 +20,10 @@
                         </figure>
                         <div class="post-content">
                             <div>
-                                <div class="post-name">名前：{{ $post->user->username }}</div>
-                                <div class="post-date">投稿日：{{ $post->created_at }}</div>
+                                <div class="post-name">{{ $post->user->username }}</div>
+                                <div class="post-date">{{ $post->created_at }}</div>
                             </div>
-                                <div class="post-text">投稿内容：{{ $post->post }}</div>
+                                <div class="post-text">{{ $post->post }}</div>
 
                             @if(Auth::id() === $post->user_id)
                                 <div class="post-actions">
@@ -53,9 +53,8 @@
             @method('PUT')
             <textarea name="post" class="modal_post"></textarea>
             <input type="hidden" name="post_id" class="modal_id" value="">
-            <input type="submit" value="更新">
+            <input type="image" src="{{ asset('images/edit.png') }}" alt="編集" class="modal_edit_btn">
         </form>
-        <a href="#" class="js-modal-close">閉じる</a>
     </div>
 </div>
 </x-login-layout>

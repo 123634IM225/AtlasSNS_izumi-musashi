@@ -361,42 +361,6 @@ label {
     height: auto;
 }
 
-.modal {
-    display: none;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.modal__bg {
-    background: rgba(0, 0, 0, 0.8);
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-}
-
-.modal__content {
-    background: #fff;
-    left: 50%;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    border-radius: 4px;
-}
-
-.modal_post {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    font-size: 16px;
-    resize: vertical;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-}
-
 .delete-form {
     text-align: right;
 }
@@ -419,6 +383,53 @@ label {
 .delete-btn:hover {
     background: url('../images/trash-h.png') no-repeat center / contain;
 }
+
+/*modal*/
+
+.modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.modal__bg {
+    background: rgba(50, 50, 50, 0.4);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.modal__content {
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    border-radius: 10px;
+}
+
+.modal__content form {
+    text-align: center;
+}
+
+.modal_post {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.modal_edit_btn {
+    width: 70px;
+}
+
 
 /*side-ber*/
 #confirm {

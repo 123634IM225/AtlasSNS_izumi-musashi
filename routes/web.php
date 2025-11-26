@@ -9,6 +9,7 @@ use App\Http\Controllers\FollowsController;
 use Illuminate\Support\Facades\Route;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +35,7 @@ Route::get('added', [RegisteredUserController::class, 'added']);
 // Route::get('top', [PostsController::class, 'index']);
 Route::post('top', [PostsController::class, 'postCreate']);
 Route::get('top', [PostsController::class, 'show'])->name('top');
-Route::put('/post/update', [PostController::class, 'update'])->name('post.update');
+Route::put('/post/update', [PostsController::class, 'update'])->name('post.update');
 Route::delete('post/{post}/delete', [PostsController::class, 'delete']);
 
 Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
