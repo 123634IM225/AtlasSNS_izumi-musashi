@@ -39,7 +39,7 @@ Route::put('/post/update', [PostsController::class, 'update'])->name('post.updat
 Route::delete('post/{post}/delete', [PostsController::class, 'delete']);
 
 Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
-Route::post('profile', [ProfileController::class, 'update']);
+Route::post('profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
 Route::get('search', [UsersController::class, 'search']);
 Route::post('search', [UsersController::class, 'searchForm']);

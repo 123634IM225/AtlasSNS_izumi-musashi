@@ -1,5 +1,5 @@
 <x-login-layout>
-    <form action="/profile" method="post" enctype="multipart/form-data">
+    <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
         @csrf
         <h2 class="header-icon"><img src="{{ asset('storage/' . Auth::user()->icon_image) }}" ></h2>
 
