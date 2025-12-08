@@ -5,11 +5,12 @@
             <input type="text" name="keyword" class="search_form" placeholder="ユーザー名">
             <button type="submit" class="search_btn"><img src="images/search.png"></button>
         </form>
+
+        @if (!empty($keyword))
+            <p class=search_word>検索ワード：{{ $keyword }}</p>
+        @endif
     </div>
 
-    @if (!empty($keyword))
-        <p>検索ワード：{{ $keyword }}</p>
-    @endif
     <div class="search_result">
         @foreach ($users as $user)
         <div class="search_list">
