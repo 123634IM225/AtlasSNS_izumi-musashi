@@ -21,7 +21,7 @@ class UsersController extends Controller
         $keyword = $request->input('keyword');
         // 2つ目の処理
         if(!empty($keyword)){
-            $users = User::where('username','like', '%'.$keyword.'%')->get();
+            $users = User::where('username','like', '%'.$keyword.'%')->where('id', '!=', Auth::id())->get();
         }else{
             $users = User::where('id', '!=', Auth::id())->get();
         }
