@@ -1,26 +1,47 @@
 <x-login-layout>
-    <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data" class="profile_form">
         @csrf
         <h2 class="header-icon"><img src="{{ asset('storage/' . Auth::user()->icon_image) }}" ></h2>
 
-        <label for="name">ユーザー名</label>
-        <input type="text" name="name" class="form-control" value="{{$user->username}}">
+        <div class="profile_block">
+            <div class="profile_item">
+                <label for="name">ユーザー名</label>
+                <input type="text" name="name" class="form_control" value="{{$user->username}}">
+            </div>
 
-        <label for="email">メールアドレス</label>
-        <input type="text" name="email" class="form-control" value="{{$user->email}}">
+            <div class="profile_item">
+                <label for="email">メールアドレス</label>
+                <input type="text" name="email" class="form_control" value="{{$user->email}}">
+            </div>
 
-        <label for="password">パスワード</label>
-        <input type="password" name="password" class="form-control" >
+            <div class="profile_item">
+                <label for="password">パスワード</label>
+                <input type="password" name="password" class="form_control" >
+            </div>
 
-        <label for="password_confirmation">パスワード確認</label>
-        <input type="password" name="password_confirmation" class="form-control" >
+            <div class="profile_item">
+                <label for="password_confirmation">パスワード確認</label>
+                <input type="password" name="password_confirmation" class="form_control" >
+            </div>
 
-        <label for="bio">自己紹介</label>
-        <input type="text" name="bio" class="form-control" value="{{$user->bio}}">
+            <div class="profile_item">
+                <label for="bio">自己紹介</label>
+                <input type="text" name="bio" class="form_control" value="{{$user->bio}}">
+            </div>
 
-        <label for="icon_image">アイコン画像</label>
-        <input type="file" name="icon_image" class="form-control-file" >
-        <button type="submit" class="btn btn-success">更新</button>
+            <div class="profile_item">
+                <label for="image">アイコン画像</label>
+
+                <div class="custom-file-box">
+                    <span class="custom-file-text">ファイルを選択</span>
+                    <input type="file" name="image" id="image" class="hidden-file-input">
+                </div>
+            </div>
+
+            <div class="profile_item_btn">
+                <button type="submit" class="profile_update_btn">更新</button>
+            </div>
+        </div>
     </form>
 
 @if ($errors->any())

@@ -570,6 +570,96 @@ label {
     cursor: pointer;
 }
 
+/* .profile-form */
+.profile_form {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 5% 10% 5% 20%;
+    width: 100%;
+}
+
+.header-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+.profile_block {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.profile_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile_item label {
+    width: 160px;
+    font-size: 20px;
+    color: #222222;
+    margin-right: 15%;
+}
+
+.profile_item input[type="text"],
+.profile_item input[type="password"],
+.profile_item input[type="file"] {
+    flex: 1;
+    padding: 6px 8px;
+    border: 2px solid #949494;
+    font-size: 20px;
+    background: #efefef;
+}
+
+.custom-file-box {
+    flex: 1;
+    height: 120px;
+    border: 2px solid #949494;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: #efefef;
+    overflow: hidden;
+}
+
+.custom-file-text {
+    font-size: 25px;
+    color: #a8a8a8;
+    background-color: #ffffff;
+    padding: 5px 60px 5px 30px;
+    pointer-events: none;
+}
+
+
+.hidden-file-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.profile_item_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.profile_update_btn {
+    background-color: #ed3a50;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 90px;
+    border: none;
+    border-radius: 8px;
+    margin-left: -30%;
+}
+
+
 /* index */
 .post_button {
     background: none;
