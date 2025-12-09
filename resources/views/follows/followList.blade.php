@@ -1,16 +1,16 @@
 <x-login-layout>
-    <div class="followlist-container">
-        <div class="user-icon-list">
-            @foreach ($followings as $user)
-                <a href="/users/{{ $user->id }}" class="user-icon-item">
+    <div class="follow_list_container">
+        <div class="user_icon_list">
+            <p class="list_title">フォローリスト</p>
+            <div class="follow_icon_wrapper">
+                @foreach ($followings as $user)
                     <img src="{{ asset('storage/' . $user->icon_image) }}" alt="icon" class="user-icon-img">
-                    <p class="user-name">{{ $user->username }}</p>
-                </a>
-            @endforeach
+                @endforeach
+            </div>
         </div>
 
         <div class="post-list">
-          @foreach($followerPosts as $post)
+          @foreach($posts as $post)
             <ul>
                 <li class="post-block">
 

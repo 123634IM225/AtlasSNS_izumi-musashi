@@ -667,6 +667,24 @@ label {
     margin-left: -30%;
 }
 
+/* follow_list */
+.user_icon_list {
+    display: flex;
+    padding: 3% 26% 4% 6%;
+    border-bottom: 12px solid #e0e0e0;
+}
+
+.list_title {
+    font-size: 25px;
+    margin-right: 60px;
+}
+
+.follow_icon_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 
 /* index */
 .post_button {

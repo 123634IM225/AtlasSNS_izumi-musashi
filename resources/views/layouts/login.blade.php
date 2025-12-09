@@ -41,7 +41,7 @@
           <p id="follow_total">{{Auth::user()->followings()->count()}}人</p>
         </div>
         <div id="follow_link">
-          <a class="btn btn-primary follow_link_btn" href="{{ url('/') }}" role="button">フォローリスト</a>
+          <a class="btn btn-primary follow_link_btn" href="{{ route('follow_list') }}" role="button">フォローリスト</a>
         </div>
         <div id="follower_info">
           <p>フォロワー数</p>
@@ -52,7 +52,7 @@
         </div>
       </div>
       <div id="search_link">
-        <a class="btn btn-primary search_link_btn" href="{{ url('/search') }}" role="button">ユーザー検索</a>
+        <a class="btn btn-primary search_link_btn" href="{{ route('search') }}" role="button">ユーザー検索</a>
       </div>
     </div>
   </div>

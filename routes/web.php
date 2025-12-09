@@ -35,17 +35,20 @@ Route::get('added', [RegisteredUserController::class, 'added']);
 // Route::get('top', [PostsController::class, 'index']);
 Route::post('top', [PostsController::class, 'postCreate']);
 Route::get('top', [PostsController::class, 'show'])->name('top');
-Route::put('/post/update', [PostsController::class, 'update'])->name('post.update');
+Route::put('post/update', [PostsController::class, 'update'])->name('post.update');
 Route::delete('post/{post}/delete', [PostsController::class, 'delete']);
 
 Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
 Route::post('profile/update', [ProfileController::class, 'update'])->name('profile.update');
 
-Route::get('search', [UsersController::class, 'search']);
-Route::post('search', [UsersController::class, 'searchForm']);
+Route::get('search', [UsersController::class, 'search'])->name('search');
+Route::post('search', [UsersController::class, 'searchForm'])->name('search.form');
 
-Route::post('/follow/{user}', [FollowsController::class, 'store'])->name('follow');
-Route::delete('/unfollow/{user}', [FollowsController::class, 'destroy'])->name('unfollow');
+Route::post('follow/{user}', [FollowsController::class, 'store'])->name('follow');
+Route::delete('unfollow/{user}', [FollowsController::class, 'destroy'])->name('unfollow');
+
+
+Route::get('/follow_list', [FollowsController::class, 'followList'])->name('follow_list');
 
 Route::get('follow-list', [PostsController::class, 'index']);
 Route::get('follower-list', [PostsController::class, 'index']);
