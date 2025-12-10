@@ -9,23 +9,23 @@
             </div>
         </div>
 
-        <div class="post-list">
+        <div class="post_list">
           @foreach($posts as $post)
             <ul>
-                <li class="post-block">
+                <li class="post_block">
 
                     <figure>
                         <img src="{{ asset('storage/' . $post->user->icon_image) }}" alt="{{ $post->user->username }}">
                     </figure>
 
-                    <div class="post-content">
+                    <div class="post_content">
 
                         <div>
-                            <div class="post-name">{{ $post->user->username }}</div>
-                            <div class="post-date">{{ $post->created_at }}</div>
+                            <div class="post_name">{{ $post->user->username }}</div>
+                            <div class="post_date">{{ $post->created_at }}</div>
                         </div>
 
-                        <div class="post-text">{{ $post->post }}</div>
+                        <div class="post_text">{{ $post->post }}</div>
 
                     </div>
                 </li>

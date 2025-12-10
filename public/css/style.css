@@ -270,29 +270,29 @@ label {
 }
 
 /* top container */
-.auth-post-block {
+.auth_post_block {
     display: flex;
     padding: 3% 18% 2% 6%;
     border-bottom: 12px solid #e0e0e0;
 }
 
-.auth-icon {
+.auth_icon {
     margin-right: 20px;
 }
 
-.auth-icon img {
+.auth_icon img {
     width: 70px;
     height: auto;
 }
 
-.post-form {
+.post_form {
     width: 100%;
     display: flex;
     flex-direction: column;
     margin-top: 15px;
 }
 
-.post-form-control {
+.post_form_control {
     width: 100%;
     padding: 0px;
     background-color: transparent;
@@ -301,26 +301,26 @@ label {
     margin-bottom: 30px;
 }
 
-.post-form-control::placeholder {
+.post_form_control::placeholder {
     color: #d6d6d6;
 }
 
-.post-button-wrapper {
+.post_button_wrapper {
     display: flex;
     justify-content: flex-end;
 }
 
-.post-button {
+.post_button {
     border: none;
     text-align: right;
 }
 
-.post-button img {
+.post_button img {
     width: 70px;
     height: auto;
 }
 
-.post-block {
+.post_block {
     list-style: none;
     border-bottom: 3px solid #cbcbcb;
     display: flex;
@@ -329,19 +329,24 @@ label {
     box-sizing: border-box;
 }
 
-.post-content {
+.post_block figure img {
+    width: 70px;
+    height: auto;
+}
+
+.post_content {
     width: 100%;
     padding: 15px;
 }
 
 
-.post-content>div:first-of-type,
-.post-content>.post-text {
+.post_content>div:first-of-type,
+.post_content>.post-text {
     display: flex;
     justify-content: space-between;
 }
 
-.post-name {
+.post_name {
     margin-bottom: 10px;
 }
 
@@ -350,37 +355,37 @@ label {
     padding: 40px;
 }
 
-.post-actions {
+.post_actions {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
 }
 
-.js-modal-open img {
+.js_modal_open img {
     width: 70px;
     height: auto;
 }
 
-.delete-form {
+.delete_form {
     text-align: right;
 }
 
-.delete-btn {
+.delete_btn {
     background: none;
     border: none;
     cursor: pointer;
 }
 
-.delete-btn img {
+.delete_btn img {
     width: 70px;
     height: auto;
 }
 
-.delete-btn:hover img {
+.delete_btn:hover img {
     opacity: 0;
 }
 
-.delete-btn:hover {
+.delete_btn:hover {
     background: url('../images/trash-h.png') no-repeat center / contain;
 }
 
@@ -684,6 +689,12 @@ label {
     flex-wrap: wrap;
     gap: 20px;
 }
+
+.user-icon-img {
+    width: 70px;
+    height: auto;
+}
+
 
 
 /* index */

@@ -30,11 +30,11 @@
             </div>
 
             <div class="profile_item">
-                <label for="image">アイコン画像</label>
+                <label for="icon_image">アイコン画像</label>
 
                 <div class="custom-file-box">
                     <span class="custom-file-text">ファイルを選択</span>
-                    <input type="file" name="image" id="image" class="hidden-file-input">
+                    <input type="file" name="icon_image" id="icon_image" class="hidden-file-input">
                 </div>
             </div>
 
