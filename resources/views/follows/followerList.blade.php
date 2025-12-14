@@ -1,6 +1,40 @@
 <x-login-layout>
+    <div class="follow_list_container">
 
+        <div class="user_icon_list">
+            <p class="list_title">フォロワーリスト</p>
+            <div class="follow_icon_wrapper">
+                @foreach ($followers as $user)
+                    <img src="{{ asset('storage/' . $user->icon_image) }}" alt="icon" class="user_icon_img">
+                @endforeach
+            </div>
+        </div>
 
-  <h2>機能を実装していきましょう。</h2>
+        <div class="post_list">
+            @foreach($posts as $post)
+                <ul>
+                    <li class="post_block">
+                        <figure>
+                            <img src="{{ asset('storage/' . $post->user->icon_image) }}" alt="{{ $post->user->username }}">
+                        </figure>
 
+                        <div class="post_content">
+                            <div>
+                                <div class="post_name">
+                                    {{ $post->user->username }}
+                                </div>
+                                <div class="post_date">
+                                    {{ $post->created_at }}
+                                </div>
+                            </div>
+
+                            <div class="post_text">
+                                {{ $post->post }}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            @endforeach
+        </div>
+    </div>
 </x-login-layout>

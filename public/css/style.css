@@ -675,22 +675,24 @@ label {
 /* follow_list */
 .user_icon_list {
     display: flex;
-    padding: 3% 26% 4% 6%;
+    padding: 3% 18% 4% 8%;
     border-bottom: 12px solid #e0e0e0;
 }
 
 .list_title {
     font-size: 25px;
     margin-right: 60px;
+    letter-spacing: -1px;
 }
 
-.follow_icon_wrap {
+.follow_icon_wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
+    row-gap: 15px;
 }
 
-.user-icon-img {
+.user_icon_img {
     width: 70px;
     height: auto;
 }

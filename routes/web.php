@@ -48,7 +48,8 @@ Route::post('follow/{user}', [FollowsController::class, 'store'])->name('follow'
 Route::delete('unfollow/{user}', [FollowsController::class, 'destroy'])->name('unfollow');
 
 
-Route::get('/follow_list', [FollowsController::class, 'followList'])->name('follow_list');
+Route::get('follow_list', [FollowsController::class, 'followList'])->name('follow.list');
+Route::get('follower_list', [FollowsController::class, 'followerList'])->name('follower.list');
 
 Route::get('follow-list', [PostsController::class, 'index']);
 Route::get('follower-list', [PostsController::class, 'index']);

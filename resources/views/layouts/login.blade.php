@@ -41,14 +41,14 @@
           <p id="follow_total">{{Auth::user()->followings()->count()}}人</p>
         </div>
         <div id="follow_link">
-          <a class="btn btn-primary follow_link_btn" href="{{ route('follow_list') }}" role="button">フォローリスト</a>
+          <a class="btn btn-primary follow_link_btn" href="{{ route('follow.list') }}" role="button">フォローリスト</a>
         </div>
         <div id="follower_info">
           <p>フォロワー数</p>
           <p id="follower_total">{{Auth::user()->followers()->count()}}人</p>
         </div>
         <div id="follower_link">
-          <a class="btn btn-primary follower_link_btn" href="{{ url('/') }}" role="button">フォロワーリスト</a>
+          <a class="btn btn-primary follower_link_btn" href="{{ route('follower.list') }}" role="button">フォロワーリスト</a>
         </div>
       </div>
       <div id="search_link">
