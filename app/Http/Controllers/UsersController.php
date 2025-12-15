@@ -17,15 +17,23 @@ class UsersController extends Controller
 
     public function searchForm(Request $request)
     {
-        // 1つ目の処理
         $keyword = $request->input('keyword');
-        // 2つ目の処理
+
         if(!empty($keyword)){
             $users = User::where('username','like', '%'.$keyword.'%')->where('id', '!=', Auth::id())->get();
         }else{
             $users = User::where('id', '!=', Auth::id())->get();
         }
-        // 3つ目の処理
+
         return view('users.search',['users'=>$users, 'keyword'=>$keyword]);
+    }
+
+    public function show(User $user)
+    {
+        $posts = $user->posts()
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('users.show', compact('user', 'posts'));
     }
 }

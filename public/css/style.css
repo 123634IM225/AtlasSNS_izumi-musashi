@@ -697,6 +697,19 @@ label {
     height: auto;
 }
 
+/* users.show */
+.user_detail_container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.user_profile_block {
+    display: flex;
+    padding: 3% 18% 2% 6%;
+    border-bottom: 12px solid #e0e0e0;
+}
+
+
 
 
 /* index */

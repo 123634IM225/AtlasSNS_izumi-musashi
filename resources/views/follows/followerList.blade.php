@@ -1,11 +1,13 @@
 <x-login-layout>
-    <div class="follow_list_container">
+    <div class="follower_list_container">
 
         <div class="user_icon_list">
             <p class="list_title">フォロワーリスト</p>
             <div class="follow_icon_wrapper">
                 @foreach ($followers as $user)
-                    <img src="{{ asset('storage/' . $user->icon_image) }}" alt="icon" class="user_icon_img">
+                    <a href="{{ route('users.show', $user->id) }}">
+                        <img src="{{ asset('storage/' . $user->icon_image) }}" alt="icon" class="user_icon_img">
+                    </a>
                 @endforeach
             </div>
         </div>
@@ -15,7 +17,9 @@
                 <ul>
                     <li class="post_block">
                         <figure>
-                            <img src="{{ asset('storage/' . $post->user->icon_image) }}" alt="{{ $post->user->username }}">
+                            <a href="{{ route('users.show', $user->id) }}">
+                                <img src="{{ asset('storage/' . $post->user->icon_image) }}" alt="{{ $post->user->username }}">
+                            </a>
                         </figure>
 
                         <div class="post_content">

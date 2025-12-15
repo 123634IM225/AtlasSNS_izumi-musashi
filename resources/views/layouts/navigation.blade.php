@@ -1,5 +1,5 @@
         <div id="nav-head">
-            <a href="{{ route('top') }}"><img src="images/atlas.png"></a>
+            <a href="{{ route('top') }}"><img src="{{ asset('images/atlas.png') }}"></a>
             <div id="nav-body">
                 <div id="auth-name">
                     <p>{{ Auth::user()->username }} さん</p>

@@ -4,7 +4,9 @@
             <p class="list_title">フォローリスト</p>
             <div class="follow_icon_wrapper">
                 @foreach ($followings as $user)
-                    <img src="{{ asset('storage/' . $user->icon_image) }}" alt="icon" class="user_icon_img">
+                    <a href="{{ route('users.show', $user->id) }}">
+                        <img src="{{ asset('storage/' . $user->icon_image) }}" alt="icon" class="user_icon_img">
+                    </a>
                 @endforeach
             </div>
         </div>
@@ -15,7 +17,9 @@
                     <li class="post_block">
 
                         <figure>
-                            <img src="{{ asset('storage/' . $post->user->icon_image) }}" alt="{{ $post->user->username }}">
+                            <a href="{{ route('users.show', $user->id) }}">
+                                <img src="{{ asset('storage/' . $post->user->icon_image) }}" alt="{{ $post->user->username }}">
+                            </a>
                         </figure>
 
                         <div class="post_content">

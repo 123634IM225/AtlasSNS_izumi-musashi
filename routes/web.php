@@ -43,6 +43,7 @@ Route::post('profile/update', [ProfileController::class, 'update'])->name('profi
 
 Route::get('search', [UsersController::class, 'search'])->name('search');
 Route::post('search', [UsersController::class, 'searchForm'])->name('search.form');
+Route::get('users/{user}', [UsersController::class, 'show'])->name('users.show');
 
 Route::post('follow/{user}', [FollowsController::class, 'store'])->name('follow');
 Route::delete('unfollow/{user}', [FollowsController::class, 'destroy'])->name('unfollow');
