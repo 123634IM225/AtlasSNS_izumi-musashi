@@ -41,12 +41,12 @@ class FollowsController extends Controller
         if (Auth::id() !== $user->id && !Auth::user()->followings->contains($user->id)) {
             Auth::user()->followings()->attach($user->id);
         }
-        return redirect('/search');
+        return redirect()->back();
     }
 
     public function destroy(User $user)
     {
         Auth::user()->followings()->detach($user->id);
-        return redirect('/search');
+        return redirect()->back();
     }
 }
