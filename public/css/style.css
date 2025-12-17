@@ -12,9 +12,9 @@ body {}
 }
 
 .common_box {
-    padding: 38px;
+    padding: 32px;
     border-radius: 16px;
-    width: 440px;
+    width: 400px;
     height: 50%;
     margin: 0 auto;
     background-color: rgba(47, 85, 117, 0.35);
@@ -25,47 +25,47 @@ body {}
     text-align: center;
     color: white;
     font-weight: 250;
-    font-size: 28px;
-    margin-bottom: 40px;
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
 .register_box_title {
     text-align: center;
     color: white;
     font-weight: 250;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 10px;
 }
 
 label {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 .input {
     width: 100%;
-    padding: 13px;
+    padding: 10px;
     margin-bottom: 25px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .button_wrapper {
     text-align: right;
-    margin: 15px auto 60px;
+    margin: 6px auto 40px;
 }
 
 .login_btn,
 .register_btn {
     background-color: #ed3a50;
     color: white;
-    padding: 10px 42px;
+    padding: 8px 38px;
     border: none;
-    border-radius: 10px;
-    font-size: 26px;
+    border-radius: 12px;
+    font-size: 22px;
     font-weight: 300;
     cursor: pointer;
     text-align: center;
@@ -81,17 +81,17 @@ label {
 .login_link a {
     color: white;
     text-decoration: underline;
-    font-size: 21px;
+    font-size: 18px;
     font-weight: lighter;
 }
 
 /* added page */
-.return-btn {
+.return_btn {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.return-btn a {
+.return_btn a {
     display: inline-block;
     background-color: #ed3a50;
     color: white;
@@ -103,7 +103,7 @@ label {
     text-decoration: none;
 }
 
-.added-box-1 {
+.added_box_1 {
     text-align: center;
     color: white;
     font-size: 25px;
@@ -111,7 +111,7 @@ label {
     margin-bottom: 60px;
 }
 
-.added-box-2 {
+.added_box_2 {
     text-align: center;
     color: white;
     font-size: 22px;
@@ -119,23 +119,23 @@ label {
     margin-bottom: 40px;
 }
 
-.added-p-1 {
+.added_p_1 {
     margin-bottom: 5px;
     letter-spacing: -1px;
 }
 
-.added-p-2,
-.added-p-3 {
+.added_p_2,
+.added_p_3 {
     margin-bottom: 0px;
     letter-spacing: -1px;
 }
 
-.added-p-3 {
+.added_p_3 {
     margin-left: -16px;
 }
 
 /*navigation-header */
-#nav-head {
+#nav_head {
     background: #186AC9;
     display: flex;
     padding: 15px 30px 15px 30px;
@@ -143,49 +143,44 @@ label {
     justify-content: space-between;
 }
 
-#nav-head a img {
-    width: 140px;
+#nav_head a img {
+    width: 130px;
     height: auto;
 }
 
-#nav-body {
+#nav_body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    padding: 10px 40px;
+    padding: 8px 0px;
 }
 
-#auth-name {
+#auth_name {
     color: white;
-    font-size: 30px;
-    margin-right: 40px;
+    font-size: 24px;
+    margin-right: 20px;
     align-self: center;
     text-align: right;
 }
 
-#auth-name p {
+#auth_name p {
     margin: 0;
 }
 
-#nav-head ul {
+#nav_head ul {
     text-align: right;
 }
 
-#nav-head img {
-    width: 70px;
-    height: auto;
-}
-
-#menu-wrapper {
+#menu_wrapper {
     position: relative;
     display: inline-block;
 }
 
-#menu-trigger {
+#menu_trigger {
     display: inline-block;
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     border-left: 4px solid white;
     border-bottom: 4px solid white;
     transform: rotate(-45deg);
@@ -193,25 +188,24 @@ label {
     transition: transform 0.3s ease;
     cursor: pointer;
     position: relative;
-    top: -3px;
+    top: -1px;
 }
 
-#menu-trigger.active {
+#menu_trigger.active {
     transform: rotate(135deg);
 }
 
-#g-navi {
+#g_navi {
     display: none;
     position: fixed;
-    top: 120px;
+    top: 104px;
     right: 0;
     padding: 0;
     width: 20vw;
-    /* 画面サイズの19% */
     text-align: center;
 }
 
-#g-navi ul {
+#g_navi ul {
     list-style: none;
     display: block;
     border: #848484 solid 1px;
@@ -219,29 +213,34 @@ label {
     padding: 0;
 }
 
-#g-navi li {
+#g_navi li {
     background-color: #ffffff;
 }
 
-#g-navi li:hover {
+#g_navi li:hover {
     background-color: #00297e;
 }
 
-#g-navi li a {
+#g_navi li a {
     display: block;
-    font-size: 26px;
+    font-size: 28px;
     text-decoration: none;
     text-align: center;
     color: #848484;
-    padding: 30px 0;
+    padding: 34px 0;
 }
 
-#g-navi li a:hover {
+#g_navi li a:hover {
     color: #ffffff;
 }
 
-#g-navi.active {
+#g_navi.active {
     display: block;
+}
+
+#nav_head img {
+    width: 60px;
+    height: auto;
 }
 
 /* main content */
@@ -260,7 +259,7 @@ label {
     width: 100%;
 }
 
-#side-bar {
+#side_bar {
     flex: 0 0 19%;
     border-left: 1px solid #727272;
 }
@@ -435,17 +434,23 @@ label {
 /*side-ber*/
 #confirm {
     border-bottom: 3px solid #cbcbcb;
-    padding: 30px;
+    padding: 30px 0px 30px 30px;
+}
+
+#confirm p {
+    font-size: 16px;
 }
 
 #follow_info,
 #follower_info {
     display: flex;
+    justify-content: space-between;
+    width: 160px;
 }
 
 #follow_total,
 #follower_total {
-    margin-left: 30px;
+    text-align: right;
 }
 
 #follow_link,
@@ -459,13 +464,13 @@ label {
     background-color: #0656cf;
     color: white;
     display: inline-block;
-    width: 200px;
+    width: 160px;
     padding: 10px 0px;
-    margin: 20px 0px;
-    font-size: 20px;
+    margin: 14px 0px;
+    font-size: 16px;
     font-weight: 300;
-    letter-spacing: -0.1em;
-    border-radius: 12px;
+    letter-spacing: -2px;
+    border-radius: 10px;
     text-align: center;
 }
 
@@ -474,11 +479,7 @@ label {
 .follower_link_btn:hover {
     background-color: #0656cf;
     color: white;
-}
-
-.search_link_btn:hover {
-    background-color: #0656cf;
-    color: white;
+    border: none;
 }
 
 #search_link {
@@ -499,6 +500,7 @@ label {
 .search_link_btn:hover {
     background-color: #0656cf;
     color: white;
+    border: none;
 }
 
 /* search */

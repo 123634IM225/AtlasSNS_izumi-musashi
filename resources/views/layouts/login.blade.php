@@ -33,7 +33,7 @@
     <div id="container">
       {{ $slot }}
     </div>
-    <div id="side-bar">
+    <div id="side_bar">
       <div id="confirm">
         <p>{{ Auth::user()->username }}さんの</p>
         <div id="follow_info">
@@ -41,18 +41,18 @@
           <p id="follow_total">{{Auth::user()->followings()->count()}}人</p>
         </div>
         <div id="follow_link">
-          <a class="btn btn-primary follow_link_btn" href="{{ route('follow.list') }}" role="button">フォローリスト</a>
+          <a class="follow_link_btn" href="{{ route('follow.list') }}" role="button">フォローリスト</a>
         </div>
         <div id="follower_info">
           <p>フォロワー数</p>
           <p id="follower_total">{{Auth::user()->followers()->count()}}人</p>
         </div>
         <div id="follower_link">
-          <a class="btn btn-primary follower_link_btn" href="{{ route('follower.list') }}" role="button">フォロワーリスト</a>
+          <a class="follower_link_btn" href="{{ route('follower.list') }}" role="button">フォロワーリスト</a>
         </div>
       </div>
       <div id="search_link">
-        <a class="btn btn-primary search_link_btn" href="{{ route('search') }}" role="button">ユーザー検索</a>
+        <a class="search_link_btn" href="{{ route('search') }}" role="button">ユーザー検索</a>
       </div>
     </div>
   </div>

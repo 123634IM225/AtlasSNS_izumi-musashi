@@ -29,24 +29,25 @@ h1 {
     margin-bottom: 0px;
 }
 
-.atlas-img {
-    width: 10.5%;
+.atlas_img {
+    width: 180px;
     height: auto;
+    margin: 0 auto;
 }
 
-.sub-title {
+.sub_title {
     color: white;
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 900;
     margin-left: -2.7%;
 }
 
 .space_large {
-    padding-top: 8%;
+    padding-top: 9%;
     padding-bottom: 4%;
 }
 
-.space-small {
-    padding-top: 60px;
-    padding-bottom: 55px;
+.space_small {
+    padding-top: 2%;
+    padding-bottom: 1%;
 }

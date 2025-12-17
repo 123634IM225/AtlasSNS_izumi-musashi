@@ -25,8 +25,8 @@
     </head>
     <body {{ $attributes }}>
         <header>
-            <h1><img src="images/atlas.png" class="atlas-img"></h1>
-            <p class="sub-title">Social Network Service</p>
+            <h1><img src="images/atlas.png" class="atlas_img"></h1>
+            <p class="sub_title">Social Network Service</p>
         </header>
         <div id="container">
             {{ $slot }}

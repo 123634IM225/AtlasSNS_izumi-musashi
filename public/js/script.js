@@ -1,7 +1,7 @@
 $(function () {
-  $('#menu-trigger').on('click', function () {
+  $('#menu_trigger').on('click', function () {
     $(this).toggleClass('active');
-    $('#g-navi').toggleClass('active');
+    $('#g_navi').toggleClass('active');
   });
 });
 
