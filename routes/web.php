@@ -23,20 +23,18 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
-// Authenticate.phpで定義したルートに名前をつけるために名前付きルート
 Route::post('login', [AuthenticatedSessionController::class, 'store'])->name('login.store');
 Route::get('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 Route::get('register', [RegisteredUserController::class, 'create'])->name('register.create');
-Route::post('register', [RegisteredUserController::class, 'store']);
+Route::post('register', [RegisteredUserController::class, 'store'])->name('register.store');
 
-Route::get('added', [RegisteredUserController::class, 'added']);
+Route::get('added', [RegisteredUserController::class, 'added'])->name('added');
 
-// Route::get('top', [PostsController::class, 'index']);
-Route::post('top', [PostsController::class, 'postCreate']);
 Route::get('top', [PostsController::class, 'show'])->name('top');
+Route::post('top', [PostsController::class, 'postCreate'])->name('post.create');
 Route::put('post/update', [PostsController::class, 'update'])->name('post.update');
-Route::delete('post/{post}/delete', [PostsController::class, 'delete']);
+Route::delete('post/{post}/delete', [PostsController::class, 'delete'])->name('post.delete');
 
 Route::get('profile', [ProfileController::class, 'profile'])->name('profile');
 Route::post('profile/update', [ProfileController::class, 'update'])->name('profile.update');

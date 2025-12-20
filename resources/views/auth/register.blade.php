@@ -1,5 +1,5 @@
 <x-logout-layout class="space_small">
-{!! Form::open(['url' => 'register']) !!}
+{!! Form::open(['route' => 'register.store']) !!}
     <div class="common_box">
 
         <p class="register_box_title">新規ユーザー登録</p>

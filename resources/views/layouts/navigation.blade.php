@@ -2,7 +2,8 @@
     <a href="{{ route('top') }}"><img src="{{ asset('images/atlas.png') }}"></a>
     <div id="nav_body">
         <div id="auth_name">
-            <p>{{ Auth::user()->username }} さん</p>
+            <span id="auth_username">{{ Auth::user()->username }}</span>
+            <span id="auth_honorific">さん</span>
         </div>
         <div id="menu_wrapper">
             <span id="menu_trigger" class="menu_trigger"></span>

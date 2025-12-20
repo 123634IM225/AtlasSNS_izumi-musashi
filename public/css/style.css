@@ -164,9 +164,10 @@ label {
     text-align: right;
 }
 
-#auth_name p {
-    margin: 0;
+#auth_username {
+    margin-right: 14px;
 }
+
 
 #nav_head ul {
     text-align: right;
@@ -276,7 +277,7 @@ label {
 }
 
 .auth_icon img {
-    width: 70px;
+    width: 60px;
     height: auto;
 }
 
@@ -292,8 +293,8 @@ label {
     padding: 0px;
     background-color: transparent;
     border: none;
-    font-size: 24px;
-    margin-bottom: 30px;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .post_form_control::placeholder {
@@ -311,27 +312,31 @@ label {
 }
 
 .post_button img {
-    width: 70px;
+    width: 60px;
     height: auto;
+}
+
+ul {
+    margin: 0;
 }
 
 .post_block {
     list-style: none;
     border-bottom: 3px solid #cbcbcb;
     display: flex;
-    padding: 1% 1% 1% 10%;
+    padding: 1.8% 1.8% 1.8% 10%;
     width: 100%;
     box-sizing: border-box;
 }
 
 .post_block figure img {
-    width: 70px;
+    width: 60px;
     height: auto;
 }
 
 .post_content {
     width: 100%;
-    padding: 15px;
+    padding: 0px 15px;
 }
 
 
@@ -342,7 +347,7 @@ label {
 }
 
 .post_name {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 
 .content {
@@ -353,11 +358,10 @@ label {
 .post_actions {
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
 }
 
 .js_modal_open img {
-    width: 70px;
+    width: 60px;
     height: auto;
 }
 
@@ -372,7 +376,7 @@ label {
 }
 
 .delete_btn img {
-    width: 70px;
+    width: 60px;
     height: auto;
 }
 
@@ -446,6 +450,7 @@ label {
     display: flex;
     justify-content: space-between;
     width: 160px;
+    margin-top: 20px;
 }
 
 #follow_total,
@@ -490,10 +495,10 @@ label {
 .search_link_btn {
     background-color: #0656cf;
     color: white;
-    padding: 8px 50px;
-    font-size: 24px;
+    padding: 12px 30px;
+    font-size: 20px;
     font-weight: 300;
-    border-radius: 12px;
+    border-radius: 8px;
     text-align: center;
 }
 

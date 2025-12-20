@@ -2,10 +2,8 @@
 <div class="container">
         <div class="auth_post_block">
             <div class="auth_icon"><img src="{{ asset('storage/' . Auth::user()->icon_image) }}" ></div>
-            {{ Form::open(['url' => '/top', 'class' => 'post_form']) }}
-            <!-- <div class="form-group"> -->
+            {{ Form::open(['route' => 'post.create', 'class' => 'post_form']) }}
                 {{ Form::input('text', 'content', null, ['required', 'class' => 'post_form_control', 'placeholder' => '投稿内容を入力してください。']) }}
-            <!-- </div> -->
                 <div class="post_button_wrapper">
                     <button type="submit" class="post_button"><img src="images/post.png"></button>
                 </div>
@@ -21,7 +19,7 @@
                         <div class="post_content">
                             <div>
                                 <div class="post_name">{{ $post->user->username }}</div>
-                                <div class="post_date">{{ $post->created_at }}</div>
+                                <div class="post_date">{{ $post->created_at->format('Y-m-d H:i') }}</div>
                             </div>
                                 <div class="post_text">{{ $post->post }}</div>
 
@@ -30,7 +28,7 @@
                                     <a href="#" class="js_modal_open" post="{{ $post->post }}" post_id="{{ $post->id }}">
                                         <img src="{{ asset('images/edit.png') }}" alt="編集">
                                     </a>
-                                    <form action="/post/{{ $post->id }}/delete" method="POST" class="delete_form" onsubmit="return confirm('こちらの投稿を削除します。よろしいでしょうか？')">
+                                    <form action="{{ route('post.delete', $post->id) }}" method="POST" class="delete_form" onsubmit="return confirm('こちらの投稿を削除します。よろしいでしょうか？')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="delete_btn">
