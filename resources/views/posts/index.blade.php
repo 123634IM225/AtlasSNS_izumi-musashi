@@ -3,7 +3,7 @@
         <div class="auth_post_block">
             <div class="auth_icon"><img src="{{ asset('storage/' . Auth::user()->icon_image) }}" ></div>
             {{ Form::open(['route' => 'post.create', 'class' => 'post_form']) }}
-                {{ Form::input('text', 'content', null, ['required', 'class' => 'post_form_control', 'placeholder' => '投稿内容を入力してください。']) }}
+                {{ Form::textarea('content', null, ['required', 'class' => 'post_form_control', 'rows' => 1, 'placeholder' => '投稿内容を入力してください。']) }}
                 <div class="post_button_wrapper">
                     <button type="submit" class="post_button"><img src="images/post.png"></button>
                 </div>
@@ -21,7 +21,7 @@
                                 <div class="post_name">{{ $post->user->username }}</div>
                                 <div class="post_date">{{ $post->created_at->format('Y-m-d H:i') }}</div>
                             </div>
-                                <div class="post_text">{{ $post->post }}</div>
+                                <div class="post_text">{!! nl2br(e($post->post)) !!}</div>
 
                             @if(Auth::id() === $post->user_id)
                                 <div class="post_actions">

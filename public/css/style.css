@@ -23,7 +23,7 @@ body {}
 
 .box_title {
     text-align: center;
-    color: white;
+    color: #ffffff;
     font-weight: 250;
     font-size: 24px;
     margin-bottom: 30px;
@@ -31,14 +31,14 @@ body {}
 
 .register_box_title {
     text-align: center;
-    color: white;
+    color: #ffffff;
     font-weight: 250;
     font-size: 22px;
     margin-bottom: 10px;
 }
 
 label {
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 4px;
@@ -241,7 +241,7 @@ label {
 
 #nav_head img {
     width: 60px;
-    height: auto;
+    height: 60px;
 }
 
 /* main content */
@@ -268,7 +268,7 @@ label {
 /* top container */
 .auth_post_block {
     display: flex;
-    padding: 3% 18% 2% 6%;
+    padding: 3% 18% 2% 7%;
     border-bottom: 12px solid #e0e0e0;
 }
 
@@ -278,7 +278,7 @@ label {
 
 .auth_icon img {
     width: 60px;
-    height: auto;
+    height: 60px;
 }
 
 .post_form {
@@ -295,6 +295,7 @@ label {
     border: none;
     font-size: 22px;
     margin-bottom: 10px;
+    resize: none;
 }
 
 .post_form_control::placeholder {
@@ -309,10 +310,11 @@ label {
 .post_button {
     border: none;
     text-align: right;
+    padding: 0;
 }
 
 .post_button img {
-    width: 60px;
+    width: 50px;
     height: auto;
 }
 
@@ -327,11 +329,12 @@ ul {
     padding: 1.8% 1.8% 1.8% 10%;
     width: 100%;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .post_block figure img {
     width: 60px;
-    height: auto;
+    height: 60px;
 }
 
 .post_content {
@@ -392,7 +395,7 @@ ul {
 
 .modal {
     display: none;
-    height: 100vh;
+    height: 102vh;
     position: fixed;
     top: 0;
     width: 100%;
@@ -400,7 +403,7 @@ ul {
 
 .modal__bg {
     background: rgba(50, 50, 50, 0.4);
-    height: 100vh;
+    height: 102vh;
     position: absolute;
     width: 100%;
 }
@@ -422,12 +425,13 @@ ul {
 
 .modal_post {
     width: 100%;
-    height: 150px;
+    height: 260px;
     padding: 10px;
     font-size: 16px;
     resize: vertical;
     border: 1px solid #ccc;
     border-radius: 2px;
+    resize: none;
 }
 
 .modal_edit_btn {
@@ -471,7 +475,7 @@ ul {
     display: inline-block;
     width: 160px;
     padding: 10px 0px;
-    margin: 14px 0px;
+    margin: 12px 0px;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: -2px;
@@ -484,19 +488,19 @@ ul {
 .follower_link_btn:hover {
     background-color: #0656cf;
     color: white;
-    border: none;
+    text-decoration: none;
 }
 
 #search_link {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 34px;
 }
 
 .search_link_btn {
     background-color: #0656cf;
     color: white;
-    padding: 12px 30px;
-    font-size: 20px;
+    padding: 12px 38px;
+    font-size: 18px;
     font-weight: 300;
     border-radius: 8px;
     text-align: center;
@@ -505,7 +509,7 @@ ul {
 .search_link_btn:hover {
     background-color: #0656cf;
     color: white;
-    border: none;
+    text-decoration: none;
 }
 
 /* search */
@@ -556,9 +560,18 @@ ul {
 
 }
 
+.user_icon_img {
+    width: 60px;
+    height: 60px;
+}
+
 .search_list p {
     margin-left: 30px;
+    margin-bottom: 0px;
+    font-size: 22px;
+    font-weight: 500;
 }
+
 
 .follow_block {
     margin-left: auto;
@@ -590,14 +603,13 @@ ul {
 .profile_form {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 40px;
     padding: 5% 10% 5% 20%;
     width: 100%;
 }
 
-.header-icon img {
-    width: 80px;
-    height: 80px;
+.header-icon {
+    margin: 0px;
 }
 
 .profile_block {
@@ -610,13 +622,14 @@ ul {
 
 .profile_item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .profile_item label {
     width: 160px;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: 400;
     color: #222222;
     margin-right: 15%;
 }
@@ -678,26 +691,22 @@ ul {
 /* follow_list */
 .user_icon_list {
     display: flex;
-    padding: 3% 18% 4% 8%;
+    padding: 2% 20% 2% 8%;
     border-bottom: 12px solid #e0e0e0;
 }
 
 .list_title {
-    font-size: 25px;
+    font-size: 28px;
     margin-right: 60px;
     letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .follow_icon_wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    row-gap: 15px;
-}
-
-.user_icon_img {
-    width: 70px;
-    height: auto;
+    row-gap: 14px;
 }
 
 /* users.show */
@@ -710,30 +719,47 @@ ul {
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    padding: 3% 1% 2% 6%;
+    padding: 3% 1% 3% 9%;
     border-bottom: 12px solid #e0e0e0;
+}
+
+.user_profile_right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.profile_row_with_action {
+    align-items: center;
+}
+
+.inline_action {
+    margin-left: auto;
 }
 
 .user_profile_text {
     display: flex;
     flex-direction: column;
+    font-size: 20px;
     gap: 18px;
 }
 
 .user_profile_row {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 .profile_label {
-    width: 90px;
-    font-weight: bold;
+    width: 150px;
+    font-weight: 500;
     color: #555;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.user_profile_action {
-    margin-left: auto;
-    align-self: flex-end;
+.profile_value {
+    flex: 1;
+    word-break: break-word;
 }
 
 .btn_unfollow {
@@ -757,9 +783,9 @@ ul {
 
 
 /* index */
-.post_button {
+/* .post_button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
-}
+} */

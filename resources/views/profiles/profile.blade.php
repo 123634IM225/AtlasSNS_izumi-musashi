@@ -2,7 +2,7 @@
     <div class="profile_container">
         <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data" class="profile_form">
             @csrf
-            <h2 class="header-icon"><img src="{{ asset('storage/' . Auth::user()->icon_image) }}" ></h2>
+            <h2 class="header-icon"><img src="{{ asset('storage/' . Auth::user()->icon_image) }}" class="user_icon_img"></h2>
 
             <div class="profile_block">
                 <div class="profile_item">

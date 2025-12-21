@@ -28,7 +28,7 @@
                                     {{ $post->user->username }}
                                 </div>
                                 <div class="post_date">
-                                    {{ $post->created_at }}
+                                    {{ $post->created_at->format('Y-m-d H:i') }}
                                 </div>
                             </div>
 

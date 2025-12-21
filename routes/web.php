@@ -3,9 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\FollowsController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Controllers\FollowsController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -49,10 +49,6 @@ Route::delete('unfollow/{user}', [FollowsController::class, 'destroy'])->name('u
 
 Route::get('follow_list', [FollowsController::class, 'followList'])->name('follow.list');
 Route::get('follower_list', [FollowsController::class, 'followerList'])->name('follower.list');
-
-Route::get('follow-list', [PostsController::class, 'index']);
-Route::get('follower-list', [PostsController::class, 'index']);
-
 
 require __DIR__ . '/auth.php';
 //auth.php に定義したルートを web.php にまとめて読み込む
