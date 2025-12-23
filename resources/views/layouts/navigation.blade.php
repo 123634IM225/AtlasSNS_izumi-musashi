@@ -15,6 +15,6 @@
                 </ul>
             </nav>
         </div>
-        <img src="{{ asset('storage/' . Auth::user()->icon_image) }}" >
+        <img src="{{ Auth::user()->icon_image ? asset('storage/' . Auth::user()->icon_image) : asset('images/default_icon.png') }}">
     </div>
 </div>

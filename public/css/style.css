@@ -248,6 +248,8 @@ label {
 #row {
     display: flex;
     flex-flow: row wrap;
+    align-items: stretch;
+    min-height: 100vh;
 }
 
 #container {

@@ -15,7 +15,7 @@
         <div class="search_result">
             @foreach ($users as $user)
             <div class="search_list">
-                <img src="{{ asset('storage/' . $user->icon_image) }}" class="user_icon_img">
+                <img src="{{ $user->icon_image ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" class="user_icon_img">
                 <p>{{ $user->username }}</p>
 
                 @if (Auth::id() !== $user->id)
