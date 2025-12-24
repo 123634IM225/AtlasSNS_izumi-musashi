@@ -1,7 +1,7 @@
 <x-login-layout>
     <div class="user_detail_container">
         <div class="user_profile_block">
-            <img src="{{ $user->icon_image ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $user->username }}" class="user_icon_img">
+            <img src="{{ $user->icon_image !== 'icon1.png' ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $user->username }}" class="user_icon_img">
 
             <div class="user_profile_right">
                 <div class="user_profile_text">
@@ -40,7 +40,7 @@
                 <ul>
                     <li class="post_block">
                         <figure>
-                            <img src="{{ $user->icon_image ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $user->username }}">
+                            <img src="{{ $user->icon_image !== 'icon1.png' ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $user->username }}">
                         </figure>
 
                         <div class="post_content">

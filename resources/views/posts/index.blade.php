@@ -2,7 +2,7 @@
 <div class="container">
         <div class="auth_post_block">
             <div class="auth_icon">
-                <img src="{{ Auth::user()->icon_image ? asset('storage/' . Auth::user()->icon_image) : asset('images/default_icon.png') }}">
+                <img src="{{ Auth::user()->icon_image !== 'icon1.png' ? asset('storage/' . Auth::user()->icon_image) : asset('images/default_icon.png') }}">
             </div>
             {{ Form::open(['route' => 'post.create', 'class' => 'post_form']) }}
                 {{ Form::textarea('content', null, ['required', 'class' => 'post_form_control', 'rows' => 1, 'placeholder' => '投稿内容を入力してください。']) }}
@@ -16,7 +16,7 @@
                 <ul>
                     <li class="post_block">
                         <figure>
-                            <img src="{{ $post->user->icon_image ? asset('storage/' . $post->user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $post->user->username }}">
+                            <img src="{{ $post->user->icon_image !== 'icon1.png' ? asset('storage/' . $post->user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $post->user->username }}">
                         </figure>
                         <div class="post_content">
                             <div>

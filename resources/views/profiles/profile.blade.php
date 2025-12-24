@@ -3,7 +3,7 @@
         <form action="{{ route('profile.update') }}" method="post" enctype="multipart/form-data" class="profile_form">
             @csrf
             <h2 class="header-icon">
-                <img src="{{ Auth::user()->icon_image ? asset('storage/' . Auth::user()->icon_image) : asset('images/default_icon.png') }}" class="user_icon_img">
+                <img src="{{ Auth::user()->icon_image !== 'icon1.png' ? asset('storage/' . Auth::user()->icon_image) : asset('images/default_icon.png') }}" class="user_icon_img">
             </h2>
 
             <div class="profile_block">

@@ -6,7 +6,7 @@
             <div class="follow_icon_wrapper">
                 @foreach ($followers as $user)
                     <a href="{{ route('users.show', $user->id) }}">
-                        <img src="{{ $user->icon_image ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" alt="icon" class="user_icon_img">
+                        <img src="{{ $user->icon_image !== 'icon1.png' ? asset('storage/' . $user->icon_image) : asset('images/default_icon.png') }}" alt="icon" class="user_icon_img">
                     </a>
                 @endforeach
             </div>
@@ -18,7 +18,7 @@
                     <li class="post_block">
                         <figure>
                             <a href="{{ route('users.show', $user->id) }}">
-                                <img src="{{ $post->user->icon_image ? asset('storage/' . $post->user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $post->user->username }}">
+                                <img src="{{ $post->user->icon_image !== 'icon1.png' ? asset('storage/' . $post->user->icon_image) : asset('images/default_icon.png') }}" alt="{{ $post->user->username }}">
                             </a>
                         </figure>
 
